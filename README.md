@@ -23,3 +23,36 @@ Burp Suite supports the use of custom actions to enhance its capabilities and st
 public class MyCustomAction extends IBurpExtender {
     // Implementation details
 }
+```
+
+## Scan Checks
+### Overview
+Scan checks are integral to identifying vulnerabilities during a scan. They utilize various techniques to analyze the behavior of web applications.
+
+### How to Implement Custom Scan Checks
+- Custom scan checks can be implemented by creating a new class that extends the appropriate Burp API interfaces.
+- Define the logic to check for specific vulnerabilities such as SQL Injection, XSS, etc.
+
+### Example
+```java
+public class MyScanCheck implements IScanCheck {
+    // Implementation details
+}
+```
+
+## Bambda Scripts
+### Overview
+Bambda scripts are lightweight scripts that can be executed in the context of Burp Suite to perform various tasks.
+
+### How to Use Bambda Scripts
+- Bambda scripts can be added through the Burp Suites extensions.
+- Use them to automate repetitive tasks or to serve as supplementary checks during scanning.
+
+### Example
+```python
+# Example Bambda Script
+print("Hello from Bambda!")
+```
+
+## Conclusion
+This documentation is intended to assist users in leveraging the full potential of Burp Utilities. For further assistance, please refer to the official Burp Suite documentation or community forums.
