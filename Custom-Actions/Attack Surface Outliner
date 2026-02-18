@@ -1,0 +1,21 @@
+// Get selected request or response
+var selectedText = selection.requestSelection();
+
+if (selectedText.contents().toString().isBlank()) {
+    selectedText = selection.responseSelection();
+}
+
+// Convert to string for AI
+var input = selectedText.contents().toString();
+
+// AI prompt to analyze security
+var prompt = "You are a blackbox Pentester. " +
+"Analyze the following web content (request/response snippet). " +
+"List possible attack vectors, common vulnerabilities, and areas to test during a penetration test. Be concise and structured:\n\n" +
+input;
+
+// Send prompt to AI
+var reply = api.ai().prompt().execute(prompt).content();
+
+// Log AI output
+logging().logToOutput(reply);
