@@ -1,10 +1,16 @@
-# HTTPMethodMutation.java
+## HTTPMethodMutation.java
 
-The `HTTPMethodMutation.java` class is designed for performing HTTP method mutation testing. It operates by cycling through a variety of HTTP verbs: **GET**, **POST**, **PUT**, **DELETE**, **PATCH**, **OPTIONS**, **HEAD**, **TRACE**, and **CONNECT**.
+`HTTPMethodMutation` is a class responsible for mutating HTTP method requests. It enables the alteration of standard HTTP methods in outgoing requests, aiding in testing and security assessments.
 
-## Key Features:
-- **Authorization and Cookie Header Handling**: The class removes any `Authorization` and `Cookie` headers from the requests to test how the server responds to requests that lack these credentials.
-- **Mutated Request Handling**: For each HTTP verb, it sends a mutated request to the designated endpoint.
-- **Response Logging**: It logs the response status codes returned from the server for each mutated request, allowing for detailed analysis of how the server handles different HTTP methods.
+### Features:
+- Support for GET, POST, PUT, DELETE, and PATCH methods
+- Enables comprehensive HTTP request testing with varying methods
 
-This functionality is crucial for identifying potential security weaknesses in web applications, especially in how they handle various types of HTTP requests.
+## Host_Security_Analyser.java
+
+`Host_Security_Analyser` is designed to analyze the security posture of a specified host. It performs checks to identify vulnerabilities and security misconfigurations.
+
+### Key Functionalities:
+- Scans for open ports and services
+- Conducts vulnerability assessments
+- Provides security hardening recommendations
